@@ -18,7 +18,8 @@
 	$Cryptography = $_POST['crypto'];
 	$OOPS = $_POST['oops'];
 	$Python = $_POST['py'];
-    $Percentage=($OpenSource+$Cryptography+$OOPS+$Python)/4;
+    $sum = ($OpenSource+$Cryptography+$OOPS+$Python);
+    $Percentage = ($sum/400)*100;
 	$sql = "INSERT INTO marks (RegNO,StudentName,OpenSource,Cryptography,OOPS,Python,Percentage) VALUES ('$RegNo','$StudentName','$OpenSource','$Cryptography','$OOPS','$Python','$Percentage')";
 
 	if(!mysqli_query($con,$sql))
@@ -32,7 +33,7 @@
 
 	header("refresh:1; url=std.php");
 
-
+	echo "<script>alert('YOUR PERCENTAGE IS $Percentage')</script>"
 
 
 ?>
