@@ -1,3 +1,4 @@
+
 <?php
 $x=mysqli_connect('127.0.0.1','root','');
 include_once('connection.php');
@@ -8,6 +9,9 @@ $result=mysqli_query($x,$query);
 <!DOCTYPE html>
 <html>
 	<head>
+
+	<body style='background-color:pink'>
+
 		<title> Result </title>
 	</head>
 <body>
